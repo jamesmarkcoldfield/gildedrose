@@ -5,7 +5,7 @@ namespace GildedRoseTests;
 public class GildedRoseTest
 {
     [Fact]
-    public void Foo()
+    public void GildedRose_UpdateQuality_ItemNameNotChangedOnUpdate()
     {
         List<Item> items = [ new Item { Name = "foo", SellIn = 0, Quality = 0 } ];
         GildedRose app = new(items);
