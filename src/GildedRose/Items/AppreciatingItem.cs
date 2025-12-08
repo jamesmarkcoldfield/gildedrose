@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace GildedRoseKata.Items;
 
-namespace GildedRoseKata.Items
-{
     public class AppreciatingItem : StoreItem
     {
         public AppreciatingItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
