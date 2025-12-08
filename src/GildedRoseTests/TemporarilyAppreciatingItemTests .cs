@@ -23,7 +23,7 @@ public class TemporarilyAppreciatingItemTests
     }
 
     [Fact]
-    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellInAt11_QualityIncreasesByOne()
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn11_QualityIncreasesByOne()
     {
         var item = new TemporarilyAppreciatingItem("Ticket", 11, 10);
         var startQuality = item.Quality;
@@ -32,7 +32,7 @@ public class TemporarilyAppreciatingItemTests
     }
 
     [Fact]
-    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellInAt10_QualityIncreasesByTwo()
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn10_QualityIncreasesByTwo()
     {
         var item = new TemporarilyAppreciatingItem("Ticket", 10, 10);
         var startQuality = item.Quality;
@@ -40,8 +40,38 @@ public class TemporarilyAppreciatingItemTests
         Assert.Equal(startQuality + 2, item.Quality);
     }
 
+
     [Fact]
-    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellInPassed_QualityZero()
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn6_QualityIncreasesByTwo()
+    {
+        var item = new TemporarilyAppreciatingItem("Ticket", 6, 10);
+        var startQuality = item.Quality;
+        item.UpdateQuality();
+        Assert.Equal(startQuality + 2, item.Quality);
+    }
+
+
+    [Fact]
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn5_QualityIncreasesByThree()
+    {
+        var item = new TemporarilyAppreciatingItem("Ticket", 5, 10);
+        var startQuality = item.Quality;
+        item.UpdateQuality();
+        Assert.Equal(startQuality + 3, item.Quality);
+    }
+
+    [Fact]
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn1_QualityIncreasesByThree()
+    {
+        var item = new TemporarilyAppreciatingItem("Ticket", 1, 10);
+        var startQuality = item.Quality;
+        item.UpdateQuality();
+        Assert.Equal(startQuality + 3, item.Quality);
+    }
+
+
+    [Fact]
+    public void TemporarilyAppreciatingItemTests_UpdateQuality_SellIn0_QualityZero()
     {
         var item = new TemporarilyAppreciatingItem("Ticket", 0, 30);
         item.UpdateQuality();

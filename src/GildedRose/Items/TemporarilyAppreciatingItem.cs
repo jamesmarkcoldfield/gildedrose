@@ -5,6 +5,7 @@ public class TemporarilyAppreciatingItem : AppreciatingItem
     public TemporarilyAppreciatingItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
     {
     }
+
     public override void UpdateQuality()
     {
         SellIn -= 1;
@@ -21,7 +22,7 @@ public class TemporarilyAppreciatingItem : AppreciatingItem
         {
             qualityIncrease += 1;
         }
-        if (SellIn < 6)
+        if (SellIn < 5)
         {
             qualityIncrease += 1;
         }

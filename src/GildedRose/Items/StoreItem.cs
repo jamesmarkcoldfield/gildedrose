@@ -17,12 +17,15 @@ namespace GildedRoseKata.Items
 
             SellIn -= 1;
 
-            if (SellIn <= 0)
+            if (SellIn < 0)
             {
                 qualityChange = 2;
             }
 
-            Quality -= qualityChange;
+            var reducedQuality = Quality -= qualityChange;
+
+            //Ensure quality does not go below 0
+            Quality = Math.Max(0, Quality);
         }
     }
 }
