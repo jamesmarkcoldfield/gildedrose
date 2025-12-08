@@ -59,7 +59,7 @@ public class LegendaryItemTests
         legendaryItem.UpdateQuality();
 
         // Assert
-        Assert.Equal(startQuality, legendaryItem.SellIn);
+        Assert.Equal(startQuality, legendaryItem.Quality);
     }
 
 }
