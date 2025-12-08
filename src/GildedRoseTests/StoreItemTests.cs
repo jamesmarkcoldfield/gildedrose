@@ -62,5 +62,20 @@ namespace GildedRoseTests
             Assert.Equal(startQuality - 1, storeItem.Quality);
         }
 
+
+        [Fact]
+        public void StoreItem_SellInNegative_QualityDecrementsByTwo()
+        {
+            // Arrange
+            var storeItem = new StoreItem("A store item", 0, 45);
+            var startQuality = storeItem.Quality;
+
+            // Act
+            storeItem.UpdateQuality();
+
+            // Assert
+            Assert.Equal(startQuality - 2, storeItem.Quality);
+        }
+
     }
 }
