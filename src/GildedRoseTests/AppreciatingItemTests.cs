@@ -32,18 +32,18 @@ public class AppreciatingItemTests
     }
 
     [Fact]
-    public void AppreciatingItem_UpdateQuality_SellInNegative_QualityNowIncreasesByTwo()
+    public void AppreciatingItem_UpdateQuality_SellInZero_QualityNowIncreasesByTwo()
     {
-        var item = new AppreciatingItem("Cheese", -1, 34);
+        var item = new AppreciatingItem("Cheese", 0, 34);
         var startQuality = item.Quality;
         item.UpdateQuality();
         Assert.Equal(startQuality + 2, item.Quality);
     }
 
     [Fact]
-    public void AppreciatingItem_UpdateQuality_SellInZero_QualityStillIncreasesByOne()
+    public void AppreciatingItem_UpdateQuality_SellInOne_QualityStillIncreasesByOne()
     {
-        var item = new AppreciatingItem("Cheese", 0, 34);
+        var item = new AppreciatingItem("Cheese", 1, 34);
         var startQuality = item.Quality;
         item.UpdateQuality();
         Assert.Equal(startQuality + 1, item.Quality);
