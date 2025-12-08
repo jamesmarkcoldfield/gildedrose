@@ -13,8 +13,8 @@ namespace GildedRoseKata.Items
 
         public void UpdateQuality()
         {
-            Quality =+ -1;
-            SellIn =+ -1;
+            Quality += -1;
+            SellIn += -1;
         }
     }
 }
