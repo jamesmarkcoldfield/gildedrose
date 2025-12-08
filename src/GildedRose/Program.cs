@@ -10,7 +10,7 @@ public class Program
         List<Item> Items =
         [
             new StoreItem("+5 Dexterity Vest", 10, 20),
-            new StoreItem("Aged Brie", 2, 0),
+            new AppreciatingItem("Aged Brie", 2, 0),
             new StoreItem("Elixir of the Mongoose", 5, 7),
             new LegendaryItem("Sulfuras, Hand of Ragnaros", 0),
             new LegendaryItem("Sulfuras, Hand of Ragnaros", -1),
