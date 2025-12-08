@@ -10,7 +10,7 @@ public class GildedRoseTest
     {
         List<Item> items = [ItemHelpers.CreateItem("foo", 0, 0)];
         GildedRose app = new(items);
-        app.UpdateQuality();
+        app.ProcessForDays(1);
         Assert.Equal("foo", items[0].Name);
     }
 }

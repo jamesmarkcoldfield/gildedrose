@@ -27,5 +27,11 @@ namespace GildedRoseKata.Items
             //Ensure quality does not go below 0
             Quality = Math.Max(0, Quality);
         }
+
+        public override string ToString()
+        {
+            return $"{Name}, {SellIn}, {Quality}";
+        }
+
     }
 }
