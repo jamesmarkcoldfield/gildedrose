@@ -7,10 +7,16 @@
         }
 
     public override void UpdateQuality()
-        {
-            SellIn -= 1;
+    {
+        SellIn -= 1;
 
-            Quality = Math.Min(50,  Quality + 1);
+        var amountToIncrease = 1;
+
+        if (SellIn < 0)
+        {
+            amountToIncrease = 2;
         }
+
+        Quality = Math.Min(50,  Quality + amountToIncrease);
     }
 }
