@@ -11,7 +11,7 @@ namespace GildedRoseKata.Items
             Quality = quality;
         }
 
-        public void UpdateQuality()
+        public virtual void UpdateQuality()
         {
             var qualityChange = 1;
 

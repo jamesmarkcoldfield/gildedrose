@@ -8,7 +8,7 @@ public class LegendaryItem : StoreItem
     {
     }
         
-    public new void UpdateQuality()
+    public override void UpdateQuality()
     {
         //do nothing
     }

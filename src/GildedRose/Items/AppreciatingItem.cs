@@ -12,7 +12,7 @@ namespace GildedRoseKata.Items
         {
         }
 
-        public new void UpdateQuality()
+    public override void UpdateQuality()
         {
             SellIn -= 1;
 
